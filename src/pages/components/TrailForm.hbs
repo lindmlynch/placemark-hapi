@@ -1,0 +1,25 @@
+<form action="/update" method="POST">
+    <div class="field">
+        <label class="label">How many hours to complete</label> <input class="input" type="number" placeholder="hrs" name="time">
+    </div>
+    <div class="field">
+        <div class="control">
+            <input class="radio" type="radio" name="method" value="walk"> Walk
+            <input class="radio" type="radio" name="method" value="cycle"> Cycle
+        </div>
+    </div>
+    <div class="field">
+        <div class="select">
+            <select name="placemark">
+                {{#each placemarks }}
+                    <option> {{trailType}},{{name}}</option>
+                {{/each}}
+            </select>
+        </div>
+    </div>
+    <div class="field">
+        <div class="control">
+            <button class="button is-link is-light">Update</button>
+        </div>
+    </div>
+</form>

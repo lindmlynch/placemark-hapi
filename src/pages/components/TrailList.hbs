@@ -1,0 +1,22 @@
+<table class="table is-fullwidth">
+    <thead>
+    <th>Completion Time</th>
+    <th>Means of Travel</th>
+    <th>Member</th>
+    <th>Placemark</th>
+    <th>Image</th>
+    </thead>
+    <tbody>
+    {{#each trails}}
+        <tr>
+            <td>{{time}}</td>
+            <td>{{method}}</td>
+            <td> {{user.firstName}} {{user.lastName}} </td>
+            <td>{{placemark.trailType}}, {{placemark.name}}</td>
+            <td>
+                <img src="{{img}}" alt="Trail Image" />
+            </td>
+        </tr>
+    {{/each}}
+    </tbody>
+</table>
